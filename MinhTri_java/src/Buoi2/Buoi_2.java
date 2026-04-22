@@ -1,4 +1,4 @@
-package Buoi2; // Tui để tên package theo hình của ông, nếu nó báo đỏ dòng này thì ông đổi thành package Buoi2; nhé
+package Buoi2; 
 
 import java.util.Random;
 import java.util.Scanner;
@@ -9,13 +9,10 @@ public class Buoi_2 {
         Scanner scanner = new Scanner(System.in);
         Random rd = new Random();
         boolean keepPlaying = true;
-
         System.out.println("=== GAME ĐOÁN SỐ BẢN NÂNG CẤP [a...b] ===");
-
         while (keepPlaying) {
             int a = 0, b = 0;
             boolean validRange = false;
-
             System.out.println("\n--- BƯỚC 1: THIẾT LẬP ĐỘ KHÓ ---");
             while (!validRange) {
                 try {
@@ -23,7 +20,6 @@ public class Buoi_2 {
                     a = scanner.nextInt();
                     System.out.print("Nhập giá trị kết thúc (b): ");
                     b = scanner.nextInt();
-
                     if (a >= b) {
                         System.out.println("Lỗi: Giá trị 'b' phải lớn hơn 'a'. Ông nhập lại đi!");
                     } else {
@@ -39,7 +35,6 @@ public class Buoi_2 {
             int maxAttempts = 7;
             int currentAttempt = 0;
             boolean isWin = false;
-
             System.out.println("\n--- BƯỚC 2: BẮT ĐẦU ĐOÁN ---");
             System.out.println("Máy đã bí mật chọn một số từ " + a + " đến " + b + ".");
             System.out.println("Ông có tối đa 7 lần đoán. Vô!");
@@ -55,7 +50,6 @@ public class Buoi_2 {
                     scanner.nextLine(); 
                     continue; 
                 }
-
                 currentAttempt++;
 
                 if (guess == targetNumber) {
